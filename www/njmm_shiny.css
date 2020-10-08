@@ -1,0 +1,138 @@
+/* External CSS File */
+.small-box.bg-red { 
+  background-color: #CA001B !important; 
+  color: #FFFFFF !important;
+}
+
+.small-box.bg-black {
+  background-color: #828282 !important; 
+  color: #FFFFFF !important;
+}
+
+.skin-black .main-header .logo {
+  background-color: #CA001B;
+  color: #FFFFFF;
+  border-right: #CA001B;
+  font-weight: 400;
+}
+
+.skin-black .main-header .logo:hover,
+.skin-black .main-header .navbar,
+.skin-black .main-header .navbar .sidebar-toggle:hover,
+.skin-black .main-sidebar .sidebar .sidebar-menu a:hover { 
+  background-color: #CA001B;
+  
+}
+
+.skin-black .main-header .navbar .sidebar-toggle { 
+    border-right: #CA001B;
+    color: #FFFFFF;
+}
+
+.skin-black .main-sidebar,
+.skin-black .main-sidebar .sidebar .sidebar-menu .active a,
+.skin-black .main-sidebar .sidebar .sidebar-menu a { 
+    background-color: #828282;
+}
+
+.skin-black .left-side, .skin-black .main-sidebar, .skin-black .wrapper {
+  background-color: white;
+}
+
+/* Hides different colors for bar and edge of slider */
+.irs-bar, .irs-bar-edge {
+  visibility: hidden;
+}
+
+/* Make slider red to match the app */
+/*
+.irs-bar { 
+    background: #CA001B;
+    border-top: #CA001B;
+    border-bottom: #CA001B;
+}
+*/
+.irs-bar-edge,
+.irs-single { 
+    background: #CA001B;
+    border: #CA001B;
+}
+
+/* Remove small hashes on the year slider */
+.irs-grid-pol.small {
+  height: 0px;
+  
+}
+ 
+.sidebar-toggle {
+    color: #FFFFFF;
+}
+
+div.box-header {
+  text-align: center;
+}
+
+/* Danger has a new color...and it's JnJ red */
+.box.box-solid.box-danger>.box-header {
+    color: #fff;
+    background: #CA001B;
+    background-color: #CA001B;
+}
+
+/* JnJ Circular Fonts */
+h1, h2, h3, h4, h5, h6,
+.logo {
+  font-family: "J&J CircularTT Black Web", "sans-serif" !important;
+}
+
+body, 
+.info {
+  font-family: "J&J CircularTT Medium Web", "sans-serif" !important;
+}
+
+/* Color Changes */
+.content-wrapper, .right-side {
+  background-color: #F4F4F4 !important;
+}
+
+.skin-black .main-sidebar, 
+.skin-black .main-sidebar .sidebar .sidebar-menu .active a, 
+.skin-black .main-sidebar .sidebar .sidebar-menu a {
+  background-color: #CA001B !important;
+  color: #FFFFFF !important;
+}
+
+.skin-black .main-header .logo,
+.skin-black .main-header .navbar, 
+.skin-black .main-header .navbar .sidebar-toggle:hover, 
+.skin-black .main-sidebar .sidebar .sidebar-menu a:hover,
+.sidebar-toggle{
+  background-color: #FFFFFF !important;
+  color: #CA001B !important;
+}
+
+.bg-red {
+  background-color: #CA001B !important;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: row-reverse;
+  width: min-content;
+}
+
+.main-header .logo {
+  width: max-content;
+}
+
+.main-header .navbar {
+  margin-left: 0;
+}
+
+.main-header > .navbar {
+  margin-left: 0;
+}
+
+.wrapper {
+  background: white;
+}

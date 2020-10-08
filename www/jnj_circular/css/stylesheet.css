@@ -1,0 +1,93 @@
+/*
+ * Legal Disclaimer
+ * These web fonts are licensed exclusively for use on the following:
+ * Domains belonging to Johnson&Johnson
+ *
+ * It is strictly forbidden to download or use these fonts on any other website domain or media.
+ *
+ *
+ * While the @font-face statements below may be modified by the client, this
+ * disclaimer may not be removed.
+ *
+ * Lineto.com, 2018
+ */
+
+
+/*
+ *
+ * INSTRUCTIONS
+ *
+ * Copy the Legal Disclaimer and the @font-faces statements to your regular CSS file.
+ * The fonts folder(s) should be placed relative to the regular CSS file.
+ *
+ */
+
+@font-face {
+	font-family: "J&J CircularTT Black Italic Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BlackItalic.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BlackItalic.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-BlackItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Bold Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Bold.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Bold.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-Bold.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Bold Italic Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BoldItalic.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BoldItalic.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Book Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Book.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Book.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-Book.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Book Italic Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BookItalic.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-BookItalic.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-BookItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Light Web";
+	src: url("fjnj_circular/css/onts/J&J CircularTT-Light.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Light.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-Light.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Light Italic Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-LightItalic.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-LightItalic.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-LightItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Medium Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Medium.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Medium.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-Medium.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Medium Italic Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-MediumItalic.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-MediumItalic.woff2") format("woff2"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "J&J CircularTT Black Web";
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Black.eot");
+	src: url("jnj_circular/css/fonts/J&J CircularTT-Black.woff") format("woff"),
+		 url("jnj_circular/css/fonts/J&J CircularTT-Black.woff2") format("woff2");
+}
