@@ -1,0 +1,51 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
+# See https://github.com/r-lib/actions/tree/master/examples#readme for
+# additional example workflows available for the R community.
+
+name: NJMMDeploy
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        r-version: [3.6]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up R ${{ matrix.r-version }}
+        uses: r-lib/actions/setup-r@b75d3e0c21718c20529373a7dd35ff5e1c1a5759
+        with:
+          r-version: ${{ matrix.r-version }}
+      - uses: actions/cache@v2
+        with:
+          path: ~/Library/Application Support/renv
+          key: ${{ runner.os }}-renv-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-renv-
+      - name: Install system dependencies
+        if: runner.os == 'macOS'
+        run: |
+          rm '/usr/local/bin/gfortran'
+          brew install pkg-config gdal proj geos
+      - name: Install dependencies
+        run: |
+          install.packages(c("rsconnect", "testthat", "renv"))
+          renv::restore()
+        shell: Rscript {0}
+      - name: Run Tests
+        run: |
+          testthat::test_dir('test/unit_tests')
+        shell: Rscript {0}
+      - name: Push to shiny.io
+        run: |
+          rsconnect::setAccountInfo(name='johnsonandjohnson', token=${{secrets.SHINYAPPS_TOKEN}}, secret=${{secrets.SHINYAPPS_SECRET}})
+          rsconnect::deployApp(appName='njmm', appTitle='NJ Maternal Mortality Dashboard')
+        shell: Rscript {0}

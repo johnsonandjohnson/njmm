@@ -1,0 +1,12 @@
+.Rproj.user
+.Rprofile
+.Rhistory
+.RData
+.Ruserdata
+packrat/lib*/
+packrat/src/
+AHRF2019.asc
+2018-2019_AHRFDUA.doc
+AHRF2018-19.sas
+AHRF USER 2018-2019.doc
+logs

@@ -1,0 +1,18 @@
+ACS Col|Min_Age|Max_Age|Years Lived Multiplier
+x15_to_17_years|15|17|1
+x18_and_19_years|18|19|3.5
+x20_years|20|20|5
+x21_years|21|21|6
+x22_to_24_years|22|24|8
+x25_to_29_years|25|29|12
+x30_to_34_years|30|34|17
+x35_to_39_years|35|39|22
+x40_to_44_years|40|44|27
+x45_to_49_years|45|49|32
+x50_to_54_years|50|54|37
+x55_to_59_years|55|59|42
+x60_to_61_years|60|61|45.5
+x62_to_64_years|62|64|48
+x65_to_66_years|65|66|50.5
+x67_to_69_years|67|69|53
+x70_to_74_years|70|74|57

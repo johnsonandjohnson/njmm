@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="UTF-8"?><metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin/>
+                <origin/>
+                <origin/>
+                <pubdate>20190222</pubdate>
+                <title>Hospital point locations in New Jersey as of 2018-09</title>
+                <edition>This is the fourth release of data in the current schema.</edition>
+                <geoform>vector digital data</geoform>
+                <pubinfo>
+                    <pubplace/>
+                    <publish>NJ Office of Information Technology, Office of Geographic Information Systems (NJOIT - OGIS)</publish>
+                </pubinfo>
+                <onlink>https://newjersey.maps.arcgis.com/home/item.html?id=f15a09b7df4e408ea31ea2623dfd4e0b</onlink>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Point locations and limited attributes for hospitals of all types (acute care, rehabilitation, psychiatric, specialty), federally-qualified health centers, and satellite emergency departments, in New Jersey. Nursing homes and most standalone urgent care centers are not included. The point locations and most of the attributes are derived as periodic output from the NJ Department of Health (NJ DOH) Health Emergency Preparedness and Response (Hippocrates) system.</abstract>
+            <purpose>This spatial data set is intended for general cartographic use. Users who require real-time hospital status data should contact the NJ Department of Health Hippocrates system for access.&#13;
+&#13;
+This version, in coordinate system EPSG 3424, was created for use in map services in that coordinate system (NAD83, no later adjustment.)</purpose>
+            <supplinf>Corrections made to the data should be reported back to Hippocrates steward.</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20180926</caldate>
+                </sngdate>
+            </timeinfo>
+            <current>Ground condition</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>Annually</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-75.485730</westbc>
+                <eastbc>-73.967216</eastbc>
+                <northbc>41.057866</northbc>
+                <southbc>39.084111</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>NJGIN</themekt>
+                <themekey>njfw_critical</themekey>
+            </theme>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>hospital</themekey>
+                <themekey>health care</themekey>
+                <themekey>inpatient</themekey>
+                <themekey>emergency</themekey>
+            </theme>
+            <theme>
+                <themekt>ISO 19115 Topic Categories</themekt>
+                <themekey>health</themekey>
+                <themekey>structure</themekey>
+            </theme>
+            <place>
+                <placekt>None</placekt>
+                <placekey>New Jersey</placekey>
+                <placekey>NJ</placekey>
+            </place>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>See Legal Constraints, Limitations of Use (Distribution Liability) for legal disclaimer. See the balance of this metadata record for conditions that limit appropriate uses. Acknowledgement of the data set providers, NJ Dept. of Health (NJ DOH), Office of Health Information Technology, Hippocrates system; and NJ Office of Information Technology, Office of Geographic Information Systems (NJOIT - OGIS), would be appreciated for maps, data or other products derived from this data set.</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NJ Department of Health (NJ DOH), Office of Health Information Technology</cntorg>
+                    <cntper>Eileen Troutman</cntper>
+                </cntorgp>
+                <cntpos>Chief Information Officer</cntpos>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>PO Box 360</address>
+                    <city>Trenton</city>
+                    <state>NJ</state>
+                    <postal>08625-0360</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>609-633-0102</cntvoice>
+                <cntemail>eileen.troutman@doh.nj.gov</cntemail>
+            </cntinfo>
+        </ptcontac>
+        <datacred>NJ Department of Health,  Office of Health Information Technology, Hippocrates system
+NJ Office of Information Technology, Office of Geographic Information Systems</datacred>
+        <native>Version 6.2 (Build 9200) ; Esri ArcGIS 10.5.1.7333</native>
+    </idinfo>
+    <dataqual>
+        <attracc>
+            <attraccr>Attributes are published as received from the Hippocrates system, except for several fields that were calculated and a small number of custom edits. See Process Steps for details.</attraccr>
+        </attracc>
+        <logic>All of the source data are from the same system. Currency of the attributes varies. Locations have been verified using various external Web sites.</logic>
+        <complete>All the hospital points from the Hippocrates system are included, as of the time period of content date (temporal extent date), except for confirmed errors.</complete>
+        <posacc>
+            <horizpa>
+                <horizpar>Base map orthophotography at 1:2400 nominal scale. Most hospital points are placed at the emergency department entrance, the main entrance, or in the center of the main facility building. Many records have locations corrected from those received from HIPPOCRATES.</horizpar>
+            </horizpa>
+        </posacc>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <pubdate>20170112</pubdate>
+                        <title>NJ Health Emergency Preparedness and Response System</title>
+                    </citeinfo>
+                </srccite>
+                <srcscale>2400</srcscale>
+                <typesrc>onLine</typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>20180926</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr>Ground condition</srccurr>
+                </srctime>
+                <srccitea>NJ Health Emergency Preparedness and Response System</srccitea>
+                <srccontr>Processed output from New Jersey Hippocrates health situational awareness system.</srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>A tabular report derived from spatial data points in geographic coordinates, WGS84, and selected attributes, was exported from the HIPPOCRATES system, for records representing operating facilities.</procdesc>
+                <procdate>20180926</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>NJ Department of Health (NJ DOH), Office of Infomation Technology Services (OITS), Data Processing</cntorg>
+                            <cntper>Janet Cailoa</cntper>
+                        </cntorgp>
+                        <cntpos>Project Manager</cntpos>
+                        <cntaddr>
+                            <addrtype>physical</addrtype>
+                            <address>25 South Stockton Street</address>
+                            <city>Trenton</city>
+                            <state>NJ</state>
+                            <postal>08625</postal>
+                        </cntaddr>
+                        <cntvoice>609-633-0405</cntvoice>
+                        <cntemail>janet.caiola@doh.nj.gov</cntemail>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Feature classes were created both from an event theme based on latitude and longitude values from HIPPOCRATES report, and via address-matching with the OGIS cascading address locator. These were compared to the previous version of the published feature class Strc_emgy_hospital, from 2017, and more-recent data created, but not used, for the Safe Haven infant drop-off map. The latter data included emergency departments with 24-hour staffing.
+
+All of the HIPPOCRATES -derived points were compared to other data, and most were moved to corrected locations. Records that generated ambiguous locations were researched futher to establish the correct location. One record was added for a facility that was in the Safe Haven data, but not in the HIPPOCRATES report. Editors tracked researched information and location changes in the working feature class, with record-level metadata. 
+
+The finished location data were reviewed with senior staff.
+
+Date is approximate.</procdesc>
+                <procdate>20190109</procdate>
+                <proctime>113000</proctime>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>NJ Office of Information Technology, Office of Geographic Information Systems (NJOIT - OGIS)</cntorg>
+                            <cntper>Deepa Sanjeevaraya</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Specialist</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing</addrtype>
+                            <address>PO Box 212</address>
+                            <city>Trenton</city>
+                            <state>NJ</state>
+                            <postal>08625-0212</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>609-376-7589</cntvoice>
+                        <cntfax>609-633-0400</cntfax>
+                        <cntemail>deepa.sanjeevaraya@tech.nj.gov</cntemail>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+            <procstep>
+                <procdesc>Latitude and longitude fields were re-calculated based on the revised point locations. Several other fields also were filled by calcuation. Records were eliminated for facilites that had closed, had been demolished, or had been converted to other uses.
+
+Revised latitude and longitude values were supplied back to Hippocrates.  
+
+Address and City fields were recalculated for selected records to convert contents to all capital letters,    
+
+Metadata were imported and edited.</procdesc>
+                <procdate>20190214</procdate>
+                <proccont>
+                    <cntinfo>
+                        <cntorgp>
+                            <cntorg>NJ Office of Information Technology, Office of Geographic Information Systems (NJOIT - OGIS)</cntorg>
+                            <cntper>Edith Konopka</cntper>
+                        </cntorgp>
+                        <cntpos>GIS Specialist</cntpos>
+                        <cntaddr>
+                            <addrtype>mailing</addrtype>
+                            <address>PO Box 212</address>
+                            <city>Trenton</city>
+                            <state>NJ</state>
+                            <postal>08625-0212</postal>
+                            <country>US</country>
+                        </cntaddr>
+                        <cntvoice>609-376-7530</cntvoice>
+                        <cntemail>edith.konopka@tech.nj.gov</cntemail>
+                        <hours>9-4</hours>
+                    </cntinfo>
+                </proccont>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <spdoinfo>
+        <direct>Vector</direct>
+        <ptvctinf>
+            <sdtsterm>
+                <sdtstype>Entity point</sdtstype>
+                <ptvctcnt>244</ptvctcnt>
+            </sdtsterm>
+        </ptvctinf>
+    </spdoinfo>
+    <eainfo>
+        <detailed>
+            <enttyp>
+                <enttypl>Strc_emgy_hospital_201902</enttypl>
+                <enttypd>Hospital point locations</enttypd>
+                <enttypds>NJ DOH, OITS; NJOIT, OGIS</enttypds>
+            </enttyp>
+            <attr>
+                <attrlabl>OBJECTID</attrlabl>
+                <attrdef>Internal feature number.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Sequential unique whole numbers that are automatically generated.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>Shape</attrlabl>
+                <attrdef>Feature geometry.</attrdef>
+                <attrdefs>Esri</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Coordinates defining the features.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAME</attrlabl>
+                <attrdef>Name of the facility</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Facility names as known to NJ Hippocrates system, in text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ADDRESS</attrlabl>
+                <attrdef>Street address of the facility</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Single line street address as text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>CITY</attrlabl>
+                <attrdef>Postal city</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Postal city as text</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>STATE</attrlabl>
+                <attrdef>Two - letter state abbreviation</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <codesetd>
+                        						
+                        <codesetn>State Abbreviations</codesetn>
+                        						
+                        <codesets>USPS Publication 28 Postal Addressing Standards  Appendix B Two-letter State and Possession Abbreviations  http://pe.usps.gov/cpim/ftp/pubs/Pub28/pub28.pdf</codesets>
+                        					
+                    </codesetd>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ZIP</attrlabl>
+                <attrdef>US Postal Service Zip code</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>US Postal Service zip code, in xxxxx-xxxx or xxxxx format.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TELEPHONE</attrlabl>
+                <attrdef>Main general information telephone number</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Telephone number as text with area code and punctuation</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ALT_PHONE</attrlabl>
+                <attrdef>Alternate telephone number</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Telephone number as text with area code and punctuation. May include extension.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TYPE</attrlabl>
+                <attrdef>Facilty type</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>ACUTE CARE HOSPITALS</edomv>
+                        						
+                        <edomvd>Not provided</edomvd>
+                        						
+                        <edomvds>NJ Department of Health</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>FEDERALLY QUALIFIED HEALTH CENTERS</edomv>
+                        						
+                        <edomvd>All organizations receiving grants under Section 330 of the Public Health Service Act (PHS). They provide comprehensive health services to an underserved area or population.</edomvd>
+                        						
+                        <edomvds>US Department of Health and Human Services    http://www.hrsa.gov/healthit/toolbox/RuralHealthITtoolbox/Introduction/qualified.html</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>NON ACUTE CARE HOSPITALS</edomv>
+                        						
+                        <edomvd>Not provided</edomvd>
+                        						
+                        <edomvds>NJ Department of Health</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>SATELLITE EMERGENCY DEPARTMENTS</edomv>
+                        						
+                        <edomvd>A facility, which is owned and operated by a hospital, which shall provide emergency care and treatment for patients</edomvd>
+                        						
+                        <edomvds>NJ Department of Health  https://www.nj.gov/health/healthfacilities/about-us/facility-types/</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COUNTY</attrlabl>
+                <attrdef>Name by which the county is known</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Names of NJ counties in all capital letters</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COUNTYFIPS</attrlabl>
+                <attrdef>Five digit state + county FIPS code</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <codesetd>
+                        						
+                        <codesetn>County FIPS code</codesetn>
+                        						
+                        <codesets>US Census Bureau (since deprecation by NIST) https://www.census.gov/geo/reference/codes/cou.html</codesets>
+                        					
+                    </codesetd>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>ST_FIPS</attrlabl>
+                <attrdef>Two digit state FIPS code</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT.OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <codesetd>
+                        						
+                        <codesetn>State FIPS code</codesetn>
+                        						
+                        <codesets>US Census Bureau (since deprecation by NIST) https://www.census.gov/geo/reference/ansi_statetables.html</codesets>
+                        					
+                    </codesetd>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>COUNTRY</attrlabl>
+                <attrdef>Abbreviation for country in which the hospital is located</attrdef>
+                <attrdefs>US Homeland Infrastructure Foundation-Level Data (HIFLD)</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>"US"</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>REGION</attrlabl>
+                <attrdef>NJ Dept of Health state region</attrdef>
+                <attrdefs>NJ DOH, OITS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Northeast</edomv>
+                        						
+                        <edomvd>Counties of Bergen, Essex, Hudson</edomvd>
+                        						
+                        <edomvds>NJ DOH</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Northwest</edomv>
+                        						
+                        <edomvd>Counties of Morris, Passaic, Sussex, Warren</edomvd>
+                        						
+                        <edomvds>NJ DOH</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Central East</edomv>
+                        						
+                        <edomvd>Counties of Middlesex, Monmouth, Ocean, Union</edomvd>
+                        						
+                        <edomvds>NJ DOH</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Central West</edomv>
+                        						
+                        <edomvd>Counties of Hunterdon, Mercer, Somerset</edomvd>
+                        						
+                        <edomvds>NJ DOH</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>South</edomv>
+                        						
+                        <edomvd>Counties of Atlantic, Burlington, Camden, Cape May, Cumberland, Gloucester, Salem</edomvd>
+                        						
+                        <edomvds>NJ DOH</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LATITUDE</attrlabl>
+                <attrdef>Latitude ("Y direction") coordinate of the location in signed decimal degrees.</attrdef>
+                <attrdefs>NJ DOH</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>38</rdommin>
+                        						
+                        <rdommax>42</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>LONGITUDE</attrlabl>
+                <attrdef>Longitude ("X direction") coordinate in signed decimal degrees</attrdef>
+                <attrdefs>NJ DOH</attrdefs>
+                <attrdomv>
+                    					
+                    <rdom>
+                        						
+                        <rdommin>-76</rdommin>
+                        						
+                        <rdommax>-73</rdommax>
+                        					
+                    </rdom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>STATE_ID</attrlabl>
+                <attrdef>Unique persistent identifier assigned by the State of NJ</attrdef>
+                <attrdefs>NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Not filled in current data set.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>NAICS_CODE</attrlabl>
+                <attrdef>North American Industry Classification System code</attrdef>
+                <attrdefs>NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Not filled in current data set. Codeset is at http://www.census.gov/eos/www/naics/  .</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>OWNER</attrlabl>
+                <attrdef>Owner type of the facility.</attrdef>
+                <attrdefs>NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Not filled in current data set.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TTL_STAFF</attrlabl>
+                <attrdef>Total number of people on staff at facility.</attrdef>
+                <attrdefs>NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Not filled in current data set.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>BEDS</attrlabl>
+                <attrdef>Total number of beds in the facility.</attrdef>
+                <attrdefs>NJ DOH</attrdefs>
+                <attrdomv>
+                    					
+                    <udom>Number of beds as an integer. Value 9999999 signifies No Data.</udom>
+                    				
+                </attrdomv>
+            </attr>
+            <attr>
+                <attrlabl>TRAUMA</attrlabl>
+                <attrdef>Trauma center service level, filled only for trauma centers.</attrdef>
+                <attrdefs>NJ DOH, OITS; NJOIT, OGIS</attrdefs>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Level I</edomv>
+                        						
+                        <edomvd>Trauma center that treats a minimum of 600 patients per year</edomvd>
+                        						
+                        <edomvds>NJ Department of Health  http://www.state.nj.us/health/ems/trama_centers.shtml</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+                <attrdomv>
+                    					
+                    <edom>
+                        						
+                        <edomv>Level II</edomv>
+                        						
+                        <edomvd>Trauma center that treats a minimum of 350 patients per year</edomvd>
+                        						
+                        <edomvds>NJ Department of Health  http://www.state.nj.us/health/ems/trama_centers.shtml</edomvds>
+                        					
+                    </edom>
+                    				
+                </attrdomv>
+            </attr>
+        </detailed>
+    </eainfo>
+    <distinfo>
+        <distrib>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NJ Office of Information Technology, Office of Geographic Information Systems NJOIT - OGIS)</cntorg>
+                </cntorgp>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>PO Box 212</address>
+                    <city>Trenton</city>
+                    <state>NJ</state>
+                    <postal>08625-0212</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>609.633.9103</cntvoice>
+                <cntfax>609.633.0400</cntfax>
+                <cntemail>njgin@oit.state.nj.us</cntemail>
+            </cntinfo>
+        </distrib>
+        <resdesc>Downloadable Data</resdesc>
+        <distliab>The State of New Jersey makes great effort to provide secure, accurate, and complete data and metadata. However, portions of the data and metadata may be incorrect or not current. Any errors or omissions should be reported for investigation.  
+
+The State of New Jersey, its officers, employees or agents shall not be liable for damages or losses of any kind arising out of or in connection with the use or performance of data and metadata, including but not limited to, damages or losses caused by reliance upon the accuracy or timeliness of any such data and metadata, or damages incurred from the viewing, distributing, or copying of those materials.  
+
+The data and metadata are provided "as is." No warranty of any kind, implied, expressed, or statutory, including but not limited to the warranties of non-infringement of third party rights, title, merchantability, fitness for a particular purpose, and freedom from computer virus, is given with respect to the data and metadata, or its hyperlinks to other Internet resources.  
+
+The State disclaims any duty or obligation either to maintain availability of or to update the data and metadata.</distliab>
+        <stdorder>
+            <digform>
+                <digtinfo>
+                    <formname>shapefile</formname>
+                    <formvern>10</formvern>
+                    <filedec>zip</filedec>
+                </digtinfo>
+                <digtopt>
+                    <onlinopt>
+                        <computer>
+                            <networka>
+                                <networkr>https://maps.nj.gov/arcgis/rest/services/Framework/Structures_and_Critical_Infrastructure/MapServer/8</networkr>
+                            </networka>
+                        </computer>
+                    </onlinopt>
+                </digtopt>
+            </digform>
+            <fees>none</fees>
+            <ordering>Download from Open Data.</ordering>
+        </stdorder>
+        <availabl>
+            <timeinfo>
+                <sngdate>
+                    <caldate>20190225</caldate>
+                </sngdate>
+            </timeinfo>
+        </availabl>
+    </distinfo>
+    <metainfo>
+        <metd>20190315</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>NJ Office of Information Technology (NJOIT), Office of Geographic Information Systems (OGIS)</cntorg>
+                    <cntper>Edith Konopka</cntper>
+                </cntorgp>
+                <cntpos>GIS Specialist</cntpos>
+                <cntaddr>
+                    <addrtype>mailing</addrtype>
+                    <address>PO Box 212</address>
+                    <city>Trenton</city>
+                    <state>NJ</state>
+                    <postal>08625-0212</postal>
+                    <country>US</country>
+                </cntaddr>
+                <cntvoice>609-376-7530</cntvoice>
+                <cntemail>edith.konopka@tech.nj.gov</cntemail>
+                <hours>9-4</hours>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+    </metainfo>
+</metadata>
