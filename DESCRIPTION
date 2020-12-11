@@ -1,1 +1,11 @@
-NJMM is an interactive web application that visualizes maternal mortality in the state of New Jersey in order to raise awareness of maternal mortality and make it easier to see how it relates to other potential factors (e.g. access to healthcare)
+Package: NJMM
+Title: New Jersey Maternal Mortality Dashboard
+Version: 1.0
+Authors@R: person("Doug", "Friedman", email = "oswg@its.jnj.com",
+                  role = c("aut", "cre"))
+Description: NJMM is an interactive web application that visualizes maternal mortality in the state of New Jersey 
+    in order to raise awareness of maternal mortality and make it easier to see how it relates to other
+    potential factors (e.g. access to healthcare).
+Depends: R (>= 3.6.0)
+License: MIT
+LazyData: true

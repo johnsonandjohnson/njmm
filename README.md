@@ -1,5 +1,7 @@
 # __NJ Maternal Mortality Pilot__
 
+![NJMM_Build](https://github.com/johnsonandjohnson/njmm/workflows/NJMM_Build/badge.svg?branch=main)
+
 This project is a collaboration with the Women's Health Group
 to build an interactive web application that visualizes maternal mortality
 in the state of New Jersey in order to raise awareness of maternal mortality
