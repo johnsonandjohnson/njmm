@@ -223,17 +223,7 @@ function(request) {
                 and science based, ethics and value driven, enterprise wide function at Johnson & Johnson."),
                 p(strong("Advanced Analytics"), "is a cross functional team within Johnson & Johnson Technology 
                 Services uniquely positioned to solve data science problems across the enterprise."),
-                br(),
-                p(strong("For more information about...")),
-                p(
-                  "Women's Health Group, contact",
-                  a(href = "mailto:RCheng4@its.jnj.com", "Ru-fong Cheng")
-                ),
-                p(
-                  "Advanced Analytics, reach out to",
-                  a(href = "mailto:DFriedm4@its.jnj.com", "Doug Friedman")
-                ),
-                img(src = "htc_heart_logo.svg", width = 250)
+                br()
               )
             )
           )
