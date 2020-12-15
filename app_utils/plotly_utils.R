@@ -1,4 +1,5 @@
-pacman::p_load(assertthat, plotly)
+library(assertthat)
+library(plotly)
 
 #' Function to plot mmrate or mmratio. To be used with split(.county) and lapply to create a graph
 #' for each of 22 counties

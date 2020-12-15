@@ -1,4 +1,5 @@
-pacman::p_load(htmlTable, shiny)
+library(htmlTable)
+library(shiny)
 
 #' Function to add a nice HTML'd data source table on the methodology tab
 #'
