@@ -1,6 +1,6 @@
 function(request) {
   shinyUI(
-    fluidPage(
+    tagList(
       useShinyjs(),
       ui <- dashboardPage(
         skin = "black",
