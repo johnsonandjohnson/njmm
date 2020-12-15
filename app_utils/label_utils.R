@@ -1,4 +1,4 @@
-pacman::p_load(magrittr)
+library(magrittr)
 
 #' Function used to build the map labels shown when hovering over a county.
 #'

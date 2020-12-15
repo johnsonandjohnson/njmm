@@ -1,18 +1,16 @@
 # Load Libraries
-pacman::p_load(
-  dplyr,
-  leaflet,
-  leaflet.extras,
-  purrr,
-  RColorBrewer,
-  shiny,
-  shinycssloaders,
-  shinydashboard,
-  shinylogs,
-  shinyjs,
-  stringr,
-  tippy
-)
+library(dplyr)
+library(leaflet)
+library(leaflet.extras)
+library(purrr)
+library(RColorBrewer)
+library(shiny)
+library(shinycssloaders)
+library(shinydashboard)
+library(shinylogs)
+library(shinyjs)
+library(stringr)
+library(tippy)
 
 # Source utility functions
 source("app_utils/census_utils.R")
