@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "3.6.3",
+    "Version": "4.0.2",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -669,10 +669,10 @@
     },
     "renv": {
       "Package": "renv",
-      "Version": "0.9.3",
+      "Version": "0.12.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "c1a367437d8a8a44bec4b9d4974cb20c"
+      "Hash": "b5510c50c7f31d453c385c7b460af2b9"
     },
     "rgdal": {
       "Package": "rgdal",
@@ -686,7 +686,7 @@
       "Version": "0.5-5",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "dc2f6aa3dcc81a47fee312acd9afa2b0"
+      "Hash": "94a44c3f0d49ceb80c385610696873ca"
     },
     "rlang": {
       "Package": "rlang",
