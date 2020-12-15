@@ -7,9 +7,12 @@
 # additional example workflows available for the R community.
 
 name: NJMMBuild
+# on:
+#   pull_request:
+#     types: ["opened"]
 on:
-  pull_request:
-    types: ["opened"]
+  push:
+    branches: ['main']
 
 jobs:
   build:
@@ -37,10 +40,8 @@ jobs:
           brew install pkg-config gdal proj geos
       - name: Install dependencies
         run: |
-          install.packages(c("rsconnect", "testthat", "renv"))
-          renv::restore()
-        shell: Rscript {0}
+          Rscript -e "install.packages(c('rsconnect', 'testthat', 'renv'))"
+          Rscript -e "renv::restore()"
       - name: Run Tests
         run: |
-          testthat::test_dir('test/unit_tests')
-        shell: Rscript {0}
+          Rscript -e "testthat::test_dir('test/unit_tests')"
