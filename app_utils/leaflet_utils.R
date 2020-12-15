@@ -1,4 +1,7 @@
-pacman::p_load(dplyr, leaflet, leaflet.extras, stringr)
+library(dplyr)
+library(leaflet)
+library(leaflet.extras)
+library(stringr)
 
 #' Function to create leaflet NJ Map with consistent default seetings for both maps
 #'
