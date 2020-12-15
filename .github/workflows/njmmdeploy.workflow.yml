@@ -38,12 +38,13 @@ jobs:
           brew install pkg-config gdal proj geos
       - name: Install dependencies
         run: |
-          Rscript -e "install.packages(c('rsconnect', 'testthat', 'renv'))"
+          Rscript -e "install.packages(c('rsconnect', 'testthat', 'renv', 'covr'))"
           Rscript -e "renv::consent(provided = TRUE)"
           Rscript -e "renv::restore()"
       - name: Run Tests
         run: |
           Rscript test/testthat.R
+          Rscript -e "covr::codecov()"
       - name: Push to shiny.io
         run: |
           Rscript -e "rsconnect::setAccountInfo(name='johnsonandjohnson', token=${{secrets.SHINYAPPS_TOKEN}}, secret=${{secrets.SHINYAPPS_SECRET}})"

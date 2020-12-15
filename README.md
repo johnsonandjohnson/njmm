@@ -1,6 +1,5 @@
 # __NJ Maternal Mortality Pilot__
 
-![NJMMBuild](https://github.com/johnsonandjohnson/njmm/workflows/NJMMBuild/badge.svg?branch=main)
 ![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)
 
 This project is a collaboration with the Johnson & Johnson Women's Health Group
