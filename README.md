@@ -3,11 +3,15 @@
 ![NJMMBuild](https://github.com/johnsonandjohnson/njmm/workflows/NJMMBuild/badge.svg?branch=main)
 ![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)
 
-This project is a collaboration with the Women's Health Group
+This project is a collaboration with the Johnson & Johnson Women's Health Group
 to build an interactive web application that visualizes maternal mortality
 in the state of New Jersey in order to raise awareness of maternal mortality
 and make it easier to see how it relates to other potential factors
 (e.g. access to healthcare).
+
+Learn more about this effort here - https://medium.com/johnson-johnson-open-source/maternal-mortality-in-new-jersey-680a52fb5bc5.
+
+You can find the application here - https://johnsonandjohnson.shinyapps.io/njmm/.
 
 
 ##  Repository Structure

@@ -1,4 +1,6 @@
-pacman::p_load(assertthat, classInt, leaflet)
+library(assertthat)
+library(classInt)
+library(leaflet)
 
 #' Function to create custom palette for measures of maternal mortality
 #'

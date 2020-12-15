@@ -1,4 +1,4 @@
-pacman::p_load(assertthat)
+library(assertthat)
 
 #' Function to build the url to a specific county's race/ethnicity makeup for
 #' ACS 1-Year Estimates / Table C03002

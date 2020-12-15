@@ -1,6 +1,6 @@
 function(request) {
   shinyUI(
-    tagList(
+    fluidPage(
       useShinyjs(),
       ui <- dashboardPage(
         skin = "black",
@@ -213,15 +213,15 @@ function(request) {
             tabItem(
               tabName = "about",
               mainPanel(
-                h3("This application was created through a partnership between the Women's Health Group
-                 and Advanced Analytics."),
+                h3("This application was created through a partnership between the Johnson & Johnson Women's Health Group
+                 and J&J Advanced Analytics."),
                 br(),
-                p(strong("Women's Health Group"), "is an enterprise level team with a vision to better the 
+                p(strong("J&J Women's Health Group"), "is an enterprise level team with a vision to better the 
                 health of women now and for future generations. Our mission is to deliver life-changing 
                 healthcare solutions tailored for women through science, solutions, and collective action. 
-                Our group is located within the Office of the Chief Medical Officer, which is an evidence 
+                Our group is located within the J&J Office of the Chief Medical Officer, which is an evidence 
                 and science based, ethics and value driven, enterprise wide function at Johnson & Johnson."),
-                p(strong("Advanced Analytics"), "is a cross functional team within Johnson & Johnson Technology 
+                p(strong("J&J Advanced Analytics"), "is a cross functional team within Johnson & Johnson Technology 
                 Services uniquely positioned to solve data science problems across the enterprise."),
                 br()
               )
