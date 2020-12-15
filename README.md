@@ -9,6 +9,10 @@ in the state of New Jersey in order to raise awareness of maternal mortality
 and make it easier to see how it relates to other potential factors
 (e.g. access to healthcare).
 
+Learn more about this effort here - https://medium.com/johnson-johnson-open-source/maternal-mortality-in-new-jersey-680a52fb5bc5.
+
+You can find the application here - https://johnsonandjohnson.shinyapps.io/njmm/.
+
 
 ##  Repository Structure
 - `Root Folder`
