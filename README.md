@@ -1,4 +1,4 @@
-# __NJ Maternal Mortality Pilot__
+# __NJ Maternal Mortality Dashboard__
 
 ![NJMMBuild](https://github.com/johnsonandjohnson/njmm/workflows/NJMMBuild/badge.svg?branch=main)
 ![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)
