@@ -1,7 +1,12 @@
 rprojroot::find_root("nj_mmr_pilot.Rproj") %>%
   setwd()
 source("./etl/woman_years_lived.R")
+
+# Setting testthat to use waldo
 local_edition(3)
+
+# Suppressing summarise messages
+options(dplyr.summarise.inform = FALSE)
 
 # Set the file path to point to the data for these tests
 woman_years_lived_path_prefix <- file.path(path_prefix, "woman_years_lived_test")
