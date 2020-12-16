@@ -223,7 +223,8 @@ function(request) {
                 and science based, ethics and value driven, enterprise wide function at Johnson & Johnson."),
                 p(strong("J&J Advanced Analytics"), "is a cross functional team within Johnson & Johnson Technology 
                 Services uniquely positioned to solve data science problems across the enterprise."),
-                br()
+                br(),
+                p(strong("Learn more about this effort on Medium -"), a("https://medium.com/johnson-johnson-open-source/maternal-mortality-in-new-jersey-680a52fb5bc5."))
               )
             )
           )
