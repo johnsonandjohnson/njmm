@@ -25,5 +25,4 @@ path_prefix <- file.path(
   "test_data"
 )
 
-context("Running the full test suite")
 test_dir("./test/unit_tests/")
