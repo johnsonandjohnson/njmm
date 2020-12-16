@@ -11,7 +11,8 @@ function(request) {
             menuItem("Interactive Map", tabName = "map", icon = icon("map")),
             menuItem("Explore More", tabName = "bars", icon = icon("chart-bar")),
             menuItem("How This Works", tabName = "methodology", icon = icon("cogs")),
-            menuItem("About", tabName = "about", icon = icon("heartbeat"))
+            menuItem("About", tabName = "about", icon = icon("heartbeat")),
+            menuItem("Source Code", href = "https://github.com/johnsonandjohnson/njmm", icon = icon("github"))
           )
         ),
         dashboardBody(
