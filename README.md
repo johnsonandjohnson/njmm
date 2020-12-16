@@ -1,5 +1,7 @@
 # __NJ Maternal Mortality Pilot__
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ebb70ddb37434f77bf97dde80bafe40c)](https://app.codacy.com/gh/johnsonandjohnson/njmm?utm_source=github.com&utm_medium=referral&utm_content=johnsonandjohnson/njmm&utm_campaign=Badge_Grade_Settings)
+
 ![NJMMBuild](https://github.com/johnsonandjohnson/njmm/workflows/NJMMBuild/badge.svg?branch=main)
 ![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)
 
