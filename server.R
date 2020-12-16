@@ -2,8 +2,6 @@
 if (Sys.info()["sysname"] == "Linux")  source("global.R")
 
 server <- function(session, input, output) {
-  # Logging
-  track_usage(storage_mode = store_sqlite(path = "logs/"))
 
   # Sets the items in the demography select box based off either MMRatio or MMRate
   demography_select_box <- reactive({
