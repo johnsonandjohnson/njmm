@@ -2,8 +2,6 @@
 if (Sys.info()["sysname"] == "Linux")  source("global.R")
 
 server <- function(session, input, output) {
-  # Logging
-  track_usage(storage_mode = store_sqlite(path = "logs/"))
 
   # Sets the items in the demography select box based off either MMRatio or MMRate
   demography_select_box <- reactive({
@@ -290,7 +288,7 @@ server <- function(session, input, output) {
   # Reset selected value of mm_select_box2 to default value and year to 2017
   observeEvent(input$reset_input2, {
     updateSelectInput(session, "mm_select_box2", selected = "mmratio_per_100klb")
-    updateSelectInput(session, "mm_county_box", selected = MM_COUNTY_CHOICES[1])
+    updateSelectInput(session, "mm_county_box", selected = UI_GLOBALS$MM_COUNTY_CHOICES[1])
     updateSliderInput(session, "mm_slide_year2", value = 2017)
     updateRadioButtons(session, "demography_radio", selected = "age")
   })
