@@ -411,7 +411,7 @@ server <- function(session, input, output) {
 
   output$census_tbl_url <- renderUI({
     if (input$mm_county_box != "All Counties of NJ") {
-      this_fips <- counties@data %>%
+      this_fips <- COUNTIES@data %>%
         filter(County_Name == input$mm_county_box) %>%
         pull(FIPSSTCO)
 
