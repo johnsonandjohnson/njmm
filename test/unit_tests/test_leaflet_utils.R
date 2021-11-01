@@ -33,7 +33,7 @@ COUNTIES <- readRDS("data/processed/nj_counties_simplified.RDS")
 test_that(
   "Testing Other Layers",
   {
-    expect_silent(
+    expect_message(
       leaflet() %>%
         add_polygons_layer_map("Blues", "Percent Uninsured", 100, pct_uninsured)
     )
