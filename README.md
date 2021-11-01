@@ -1,6 +1,6 @@
 # __NJ Maternal Mortality Dashboard__
 
-![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)
+[![NJMMDeploy](https://github.com/johnsonandjohnson/njmm/workflows/NJMMDeploy/badge.svg?branch=main)](https://johnsonandjohnson.shinyapps.io/njmm/)
 
 This project is a collaboration with the Johnson & Johnson Women's Health Group
 to build an interactive web application that visualizes maternal mortality
@@ -15,7 +15,7 @@ You can find the application here - https://johnsonandjohnson.shinyapps.io/njmm/
 
 ##  Repository Structure
 - `Root Folder`
-  - This contains the necessary project setup files (e.g. gitignore) as well as our shiny applcation files
+  - This contains the necessary project setup files (e.g. gitignore) as well as our shiny application files
 - `data`
   - This contains almost all necessary data files (raw, external, and processed)
   - `raw`
