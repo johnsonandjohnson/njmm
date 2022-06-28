@@ -16,12 +16,12 @@ jobs:
     runs-on: macos-latest
     strategy:
       matrix:
-        r-version: [4.0]
+        r-version: ['4.1.1']
 
     steps:
       - uses: actions/checkout@v2
       - name: Set up R ${{ matrix.r-version }}
-        uses: r-lib/actions/setup-r@b75d3e0c21718c20529373a7dd35ff5e1c1a5759
+        uses: r-lib/actions/setup-r@0b468bae2ad53083dd2f475122202e8db2986d46
         with:
           r-version: ${{ matrix.r-version }}
           Ncpus: 4
