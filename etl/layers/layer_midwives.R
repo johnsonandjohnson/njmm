@@ -44,7 +44,7 @@ ahrf_county <- data_file %>%
   )
 
 # Midwives
-midwife_cols <- paste0("F14645-", 10:17)
+midwife_cols <- paste0("F14645-", 10: substring(first(AHRF_YEARS)-1, 3))
 
 # Filter to NJ counties only
 midwife_counts <- ahrf_county %>%

@@ -8,7 +8,7 @@ NJ_NTSV_Goal <- 24.7
 nj_ref <- read_csv("data/reference/nj_county_reference.csv", col_types = cols())
 
 # Read in csection data
-ntsv_csection_rates <- read_excel("data/raw/nj_ntsv_rates/NTSV Cesarean Section Rates 2000-2017.xlsx", skip = 9, col_types = "text")
+ntsv_csection_rates <- read_excel(paste0("data/raw/nj_ntsv_rates/NTSV Cesarean Section Rates ", NTSV_YEARS, ".xlsx"), skip = 9, col_types = "text")
 
 # Grab last column with the totals, and make variable of years to exclude
 total_column <- ntsv_csection_rates[, ncol(ntsv_csection_rates)]

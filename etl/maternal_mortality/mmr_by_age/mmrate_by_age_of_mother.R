@@ -13,7 +13,8 @@ mmrate_file_path_prefix <- file.path("data", "raw", "nj_maternal_deaths", "mmrat
 maternal_death_files <- find_file_names(mmrate_file_path_prefix, "^Maternal Deaths.*[0-9]{2}\\.xlsx")
 
 # Set names so purrr can use them later
-names(maternal_death_files) <- extract_attribute_groups(maternal_death_files)
+# dates variable set in master generation script
+names(maternal_death_files) <- extract_attribute_groups(maternal_death_files, dates)
 
 # Read in and clean up maternal deaths
 maternal_deaths <- maternal_deaths(maternal_death_files, mmrate_file_path_prefix, "age_of_mother")
@@ -40,7 +41,8 @@ mmrate_df <- maternal_deaths %>%
   summarise(
     maternal_deaths = sum(maternal_deaths, na.rm = TRUE),
     years_lived = sum(years_lived, na.rm = TRUE)
-  ) %>%
+  ) %>% 
+  ungroup() %>% 
   complete(year, county, age_of_mother) %>%
   mutate(
     maternal_deaths = replace(maternal_deaths, is.na(maternal_deaths), 0),

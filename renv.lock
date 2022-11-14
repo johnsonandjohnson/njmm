@@ -1,6 +1,6 @@
 {
   "R": {
-    "Version": "4.1.1",
+    "Version": "4.2.1",
     "Repositories": [
       {
         "Name": "CRAN",
@@ -25,10 +25,10 @@
     },
     "KernSmooth": {
       "Package": "KernSmooth",
-      "Version": "2.23-18",
+      "Version": "2.23-20",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "9e703ad8bf0e99f3691f05da32dfe68b"
+      "Hash": "8dcfa99b14c296bc9f1fd64d52fd3ce7"
     },
     "MASS": {
       "Package": "MASS",
@@ -368,10 +368,10 @@
     },
     "hexbin": {
       "Package": "hexbin",
-      "Version": "1.28.1",
+      "Version": "1.28.2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "3d59212f2814d65dff517e6899813c58"
+      "Hash": "76314b69dc54f8c14204063a2fd6d74a"
     },
     "highr": {
       "Package": "highr",
@@ -571,10 +571,10 @@
     },
     "nlme": {
       "Package": "nlme",
-      "Version": "3.1-151",
+      "Version": "3.1-160",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "42c8ba2b6a32a6bf0874e93e3bd86a43"
+      "Hash": "02e3c6e7df163aafa8477225e6827bc5"
     },
     "openssl": {
       "Package": "openssl",
@@ -746,21 +746,21 @@
     },
     "rgdal": {
       "Package": "rgdal",
-      "Version": "1.5-18",
+      "Version": "1.6-2",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "402fc3169948d26581d585360825c65c"
+      "Hash": "092d9f420cdeae5fc56aa24949b9aae9"
     },
     "rgeos": {
       "Package": "rgeos",
-      "Version": "0.5-5",
+      "Version": "0.5-9",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "94a44c3f0d49ceb80c385610696873ca"
+      "Hash": "7cfa4f73a070042ecf141d5c1d1bfcae"
     },
     "rlang": {
       "Package": "rlang",
-      "Version": "0.4.12",
+      "Version": "1.0.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0879f5388fe6e4d56d7ef0b7ccb031e5"
@@ -844,10 +844,10 @@
     },
     "stringi": {
       "Package": "stringi",
-      "Version": "1.5.3",
+      "Version": "1.7.8",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "a063ebea753c92910a4cca7b18bc1f05"
+      "Hash": "a68b980681bcbc84c7a67003fa796bfb"
     },
     "stringr": {
       "Package": "stringr",

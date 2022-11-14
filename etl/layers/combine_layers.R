@@ -1,9 +1,12 @@
 ## This script combines all layer data into one usable dataframe
 
+AHRF_dates <- paste(first(AHRF_YEARS), last(AHRF_YEARS), sep = "-")
+AHRF_dates_underscore <- paste(first(AHRF_YEARS), last(AHRF_YEARS), sep = "_")
+
 # File path for ARHF data used for health insurance, medicaid insurance, and poverty layers
 # (adapted from https://github.com/jjchern/ahrf/blob/master/data-raw/prep_county.R)
-doc_file <- "data/raw/ahrf_2018_2019/DOC/AHRF 2018-2019 Technical Documentation.xlsx"
-data_file <- "data/AHRF_2018-2019/DATA/AHRF2019.asc"
+doc_file <- paste0("data/raw/ahrf_", AHRF_dates_underscore, "/DOC/AHRF ", AHRF_dates, " Technical Documentation.xlsx")
+data_file <- paste0("data/AHRF_", AHRF_dates, "/DATA/AHRF", last(AHRF_YEARS), ".asc")
 
 source("./etl/layers/layer_insurance.R")
 source("./etl/layers/layer_poverty.R")

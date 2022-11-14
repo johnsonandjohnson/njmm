@@ -7,7 +7,7 @@ acs_pop_path <- file.path("data", "raw", "acs_population", "ACS_YY_1YR_B01001_wi
 woman_years_multiplier <- read_delim("./etl/maternal_mortality/years_lived_multiplier.txt", "|", col_types = cols())
 
 # Years we're working with
-years <- c(2005:2017)
+years <- YEARS_OF_DATA
 
 #' Function to read in ACS Population data for a specific year,
 #' clean it, and calculate the woman-years lived (for MMRate) for that year
@@ -21,7 +21,7 @@ years <- c(2005:2017)
 #' @return: a tibble with the FIPS_Code that pertains to the county
 #' along with the woman years lived for each county
 woman_years_lived <- function(year, min_age = 15, max_age = 49) {
-  assert("Test four digits between 2005 and 2017", {
+  assert("Test four digits between the years of data that we have", {
     x <- year
     (x >= first(years))
     (x <= last(years))
@@ -35,8 +35,8 @@ woman_years_lived <- function(year, min_age = 15, max_age = 49) {
 
   # Clean up messy ACS data and select only female population
   nj_pop <- nj_pop %>%
-    select(starts_with("Estimate; Female")) %>%
-    rename_all(~ gsub("Estimate; Female: - ", "", .)) %>%
+    select(starts_with("Estimate; Female")) %>% 
+    rename_all(~ gsub("Estimate; Female: - ", "", .)) %>% 
     select(-1) %>%
     clean_names() %>%
     mutate(FIPS_Code = nj_pop$Id2) %>%

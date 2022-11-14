@@ -48,16 +48,13 @@ NJ_COUNTY_ORDER <- COUNTIES@data$FIPSCO %>%
 # Read in MMR file
 MMR <- readRDS(file.path(p_data_dir, "mmr.rds"))
 
-
 ## MMRATIO and MMRATE - AGE OF MOTHER
 # Read in MMR file
 MMR_AGE <- readRDS(file.path(p_data_dir, "mmr_by_age.rds"))
 
-
 ## MMRATIO - ETHNICITY
 # Read in MMRatio by ethnicity
 MMRATIO_ETHNICITY <- readRDS(file.path(p_data_dir, "mmratio_by_race_ethnicity.rds"))
-
 
 ## UNIQUE GROUPS - used below in UI_GLOBALS for user input choices 
 # Age Groups - MMRate
@@ -93,8 +90,8 @@ BIRTH_HOSPS <- readRDS(file.path(p_data_dir, "hospitals_with_delivery.rds"))
 OTHER_LAYER_DF <- readRDS(file.path(p_data_dir, "other_layers.rds"))
 
 # Grab max and/or min values for legend
-MAX_PCT_UNINSURED_ANY <- max(OTHER_LAYER_DF$pct_uninsured)
-MAX_PCT_INSURED_MEDICAID <- max(OTHER_LAYER_DF$pct_medicaid)
+MAX_PCT_UNINSURED_ANY <- max(OTHER_LAYER_DF$pct_uninsured, na.rm = TRUE)
+MAX_PCT_INSURED_MEDICAID <- max(OTHER_LAYER_DF$pct_medicaid, na.rm = TRUE)
 MAX_CSECTION <- max(OTHER_LAYER_DF$ntsv_goal_diff, na.rm = TRUE)
 MIN_CSECTION <- min(OTHER_LAYER_DF$ntsv_goal_diff, na.rm = TRUE)
 MAX_OBGYN <- max(OTHER_LAYER_DF$per_capita_obgyns, na.rm = TRUE)
@@ -151,8 +148,8 @@ UI_GLOBALS <- list(
   # Year Input Configuration
   MM_YEAR_LABEL = h3("Year"),
   MM_YEAR_MIN = 2005,
-  MM_YEAR_MAX = 2017,
-  MM_YEAR_DEFAULT = 2017,
+  MM_YEAR_MAX = 2019,
+  MM_YEAR_DEFAULT = 2019,
   MM_YEAR_SEP = "",
   MM_YEAR_WIDTH = "800px",
 

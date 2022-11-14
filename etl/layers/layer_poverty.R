@@ -37,7 +37,7 @@ ahrf_county <- data_file %>%
   )
 
 # Poverty columns
-poverty_cols <- paste0("F13321-", 10:17)
+poverty_cols <- paste0("F13321-", 10:substring(first(AHRF_YEARS)-1, 3))
 
 # Filter to NJ counties only
 poverty_percent <- ahrf_county %>%

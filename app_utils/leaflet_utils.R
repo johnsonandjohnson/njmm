@@ -115,8 +115,8 @@ add_polygons_layer_map <- function(leaflet_map, color_scheme, layer_name, max_va
 obgyn_year <- function(year_selected) {
   obgyn_year <- case_when(
     between(year_selected, 2010, 2014) ~ 2010,
-    between(year_selected, 2015, 2016) ~ 2015,
-    year_selected == 2017 ~ 2017
+    between(year_selected, 2015, 2018) ~ 2015,
+    year_selected == 2019 ~ 2019
   )
   return(obgyn_year)
 }

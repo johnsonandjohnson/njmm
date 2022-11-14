@@ -13,20 +13,21 @@ nj_ref <- read_csv("data/reference/nj_county_reference.csv", col_types = cols())
 mmratio_file_path_prefix <- file.path("data", "raw", "nj_maternal_deaths", "mmratio_by_ethnicity")
 
 # Get file names
-maternal_death_files <- find_file_names(mmratio_file_path_prefix, "^Maternal Deaths 2005-2017 \\D+.xlsx")
+maternal_death_files <- find_file_names(mmratio_file_path_prefix, paste0("^Maternal Deaths ", dates, " \\D+.xlsx"))
 
 # Set names so purrr can use them later
-names(maternal_death_files) <- extract_attribute_groups(maternal_death_files)
+# dates variable set in master generation script
+names(maternal_death_files) <- extract_attribute_groups(maternal_death_files, dates)
 
 # Read in and clean up maternal deaths
 maternal_deaths <- maternal_deaths(maternal_death_files, mmratio_file_path_prefix, "ethnicity_race")
 
 # Use regex to identify all the ethnicity/race files which end only in characters[a-z] then .xlsx
-live_birth_files <- list.files(path = "data/raw/nj_live_births", pattern = "^Live Births 2005-2017 \\D+.xlsx")
+live_birth_files <- list.files(path = "data/raw/nj_live_births", pattern = paste0("^Live Births ", dates, " \\D+.xlsx"))
 
 # Set names so purrr can use them later
 names(live_birth_files) <- live_birth_files %>%
-  gsub("Live Births 2005-2017 ", "", .) %>%
+  gsub(paste0("Live Births ", dates , " "), "", .) %>%
   gsub("\\.xlsx", "", .)
 
 # Map through all the files reading in the excel files and cleaning them up
@@ -34,7 +35,7 @@ names(live_birth_files) <- live_birth_files %>%
 live_births <- live_birth_files %>%
   map(~ file.path("data/raw/nj_live_births", .x)) %>%
   map_dfr(~ read_excel(.x, skip = 10) %>% # Read in file
-    slice(3:15) %>% # Only grab 2005-2017 data
+    slice(3:(length(YEARS_OF_DATA)+2)) %>% # Only grab rows for years of data
     rename(year = `...1`) %>% # Fix year column name
     select(year, Atlantic:Warren) %>% # Only grab year + counties
     mutate_all(as.numeric) %>% # Fix types
@@ -67,6 +68,7 @@ mmratio_df <- maternal_deaths %>%
     maternal_deaths = sum(maternal_deaths, na.rm = TRUE),
     live_births = sum(live_births, na.rm = TRUE)
   ) %>%
+  ungroup %>% 
   complete(year, county, ethnicity_race) %>%
   mutate(
     maternal_deaths = replace(maternal_deaths, is.na(maternal_deaths), 0),
@@ -74,7 +76,7 @@ mmratio_df <- maternal_deaths %>%
     ethnicity_race = as.factor(ethnicity_race),
     mmratio = ifelse(live_births == 0, 0, maternal_deaths / live_births),
     mmratio_per_100klb = floor(mmratio * 100000),
-    ethnicity_race = fct_relevel(factor(unique(.$ethnicity_race)), "Other", after = 4)
+    ethnicity_race = fct_relevel(ethnicity_race, "Other", after = 4)
   ) %>%
   full_join(nj_ref, ., by = c("County_Name" = "county"))
 
