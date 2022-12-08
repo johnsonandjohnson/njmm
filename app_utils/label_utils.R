@@ -1,4 +1,5 @@
 library(magrittr)
+library(htmltools)
 
 #' Function used to build the map labels shown when hovering over a county.
 #'
