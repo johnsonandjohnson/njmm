@@ -385,8 +385,9 @@ server <- function(session, input, output) {
 
   overall_measurement <- reactive({
     multiplier <- if (input$mm_select_box == "mmrate_per_1kyl") 1000 else 100000
+    round_num_decimal_places <- if (input$mm_select_box == "mmrate_per_1kyl") 4 else 1
 
-    mmrate_or_ratio <- round(sel_data_numerator() / sel_data_denominator() * multiplier, 1) %>% as.character()
+    mmrate_or_ratio <- round(sel_data_numerator() / sel_data_denominator() * multiplier, round_num_decimal_places) %>% as.character()
   })
 
   output$info_box <- renderUI({
