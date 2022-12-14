@@ -275,21 +275,21 @@ server <- function(session, input, output) {
       )
   })
 
-  # Reset selected value of mm_select_box to default value and year to 2017
+  # Reset selected value of mm_select_box to default value and year to UIGLOBALS default year
   observeEvent(input$reset_input, {
     updateSelectInput(session, "mm_select_box", selected = "mmratio_per_100klb")
-    updateSliderInput(session, "mm_slide_year", value = 2017)
+    updateSliderInput(session, "mm_slide_year", value = UI_GLOBALS$MM_YEAR_DEFAULT)
     updateSelectInput(session, "demography_select_box", selected = "all")
 
     leafletProxy("new_jersey_map") %>% setView(lng = -74.406, lat = 40.058, zoom = 7.8)
     leafletProxy("layer_map") %>% setView(lng = -74.406, lat = 40.058, zoom = 7.8)
   })
 
-  # Reset selected value of mm_select_box2 to default value and year to 2017
+  # Reset selected value of mm_select_box2 to default value and year to UIGLOBALS default year
   observeEvent(input$reset_input2, {
     updateSelectInput(session, "mm_select_box2", selected = "mmratio_per_100klb")
     updateSelectInput(session, "mm_county_box", selected = UI_GLOBALS$MM_COUNTY_CHOICES[1])
-    updateSliderInput(session, "mm_slide_year2", value = 2017)
+    updateSliderInput(session, "mm_slide_year2", value = UI_GLOBALS$MM_YEAR_DEFAULT)
     updateRadioButtons(session, "demography_radio", selected = "age")
   })
 
