@@ -144,7 +144,7 @@ test_that(
   '2010 OB/GYN Physicians Per Capita by County' since no data is available for 2014",
   expect_equal(
     build_layer_map_title(2014, "OB/GYN Physicians Per Capita"),
-    '2010 OB/GYN Physicians Per Capita by County <br/> <i class="fa fa-exclamation-circle" role="presentation" aria-label="exclamation-circle icon"></i> <i>Years differ due to data availability.</i>' %>% HTML()
+    '2010 OB/GYN Physicians Per Capita by County <br/> <i class=\"fas fa-circle-exclamation\" role=\"presentation\" aria-label=\"circle-exclamation icon\"></i> <i>Years differ due to data availability.</i>' %>% HTML()
   )
 )
 
