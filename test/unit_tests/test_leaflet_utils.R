@@ -18,7 +18,7 @@ test_that(
 )
 
 # Load birth hospital file
-BIRTH_HOSPS <- readRDS("data/processed/hospitals_with_delivery.rds")
+BIRTH_HOSPS <<- readRDS("data/processed/hospitals_with_delivery.rds")
 test_that(
   "Testing Adding Hospital Layer",
   expect_silent(leaflet() %>% hospital_layer())
@@ -29,7 +29,8 @@ OTHER_LAYER_DF <- readRDS("data/processed/other_layers.rds")
 pct_uninsured <- OTHER_LAYER_DF %>%
   filter(year == 2017) %>%
   pull(pct_uninsured)
-COUNTIES <- readRDS("data/processed/nj_counties_simplified.RDS")
+
+COUNTIES <<- readRDS("data/processed/nj_counties_simplified.RDS")
 test_that(
   "Testing Other Layers",
   {

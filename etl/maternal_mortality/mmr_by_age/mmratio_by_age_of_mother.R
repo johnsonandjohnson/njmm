@@ -12,7 +12,8 @@ mmratio_file_path_prefix <- file.path("data", "raw", "nj_maternal_deaths", "mmra
 maternal_death_files <- find_file_names(mmratio_file_path_prefix, "^Maternal Deaths.*[0-9]{2}\\.xlsx")
 
 # Set names so purrr can use them later
-names(maternal_death_files) <- extract_attribute_groups(maternal_death_files)
+# dates variable set in master generation script
+names(maternal_death_files) <- extract_attribute_groups(maternal_death_files, dates)
 
 # Read in and clean up maternal deaths
 maternal_deaths <- maternal_deaths(maternal_death_files, mmratio_file_path_prefix, "age_of_mother")
@@ -23,7 +24,7 @@ live_birth_files <- list.files(path = "data/raw/nj_live_births", pattern = "^Liv
 
 # Set names so purrr can use them later
 names(live_birth_files) <- live_birth_files %>%
-  gsub("Live Births 2005-2017 ", "", .) %>%
+  gsub(paste0("Live Births ", dates, " "), "", .) %>%
   gsub("\\.xlsx", "", .)
 
 # Map through all the files reading in the excel files and cleaning them up
@@ -31,7 +32,7 @@ names(live_birth_files) <- live_birth_files %>%
 live_births <- live_birth_files %>%
   map(~ file.path("data/raw/nj_live_births", .x)) %>%
   map_dfr(~ read_excel(.x, skip = 10) %>% # Read in file
-    slice(3:15) %>% # Only grab 2005-2017 summaries up top
+    slice(3:(length(YEARS_OF_DATA)+2)) %>% # Only grab year summaries up top
     rename(year = `...1`) %>% # Fix year column name
     select(year, Atlantic:Warren) %>% # Only grab year + counties
     mutate_all(as.numeric) %>% # Fix types
@@ -45,7 +46,6 @@ live_births <- live_birth_files %>%
   mutate(age_of_mother = as.factor(age_of_mother) %>% fct_inorder())
 # Make age of mother a properly ordered factor so the visualization later is nice
 
-
 # Calculate MMRatio
 mmratio_df <- maternal_deaths %>%
   full_join(live_births, by = c("year", "county", "age_of_mother")) %>%
@@ -53,8 +53,9 @@ mmratio_df <- maternal_deaths %>%
   summarise(
     maternal_deaths = sum(maternal_deaths, na.rm = TRUE),
     live_births = sum(live_births, na.rm = TRUE)
-  ) %>%
-  complete(year, county, age_of_mother) %>%
+  )%>% 
+  ungroup %>% 
+  complete(year, county, age_of_mother) %>% 
   mutate(
     maternal_deaths = replace(maternal_deaths, is.na(maternal_deaths), 0),
     live_births = replace(live_births, is.na(live_births), 0),

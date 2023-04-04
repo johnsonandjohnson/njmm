@@ -13,7 +13,7 @@ percent_insured_to_RDS <- function(insurance_type) {
   # Read in ACS data
   acs_files <- file.path("data", "raw", paste0("acs_", tolower(insurance_type), "_insurance")) %>%
     list.files(".csv", full.names = T) %>%
-    setNames(2010:2018)
+    setNames(INSURANCE_YEARS_OF_DATA)
 
   insurance_cov <- acs_files %>%
     map(read_csv, skip = 1, col_types = cols()) %>%

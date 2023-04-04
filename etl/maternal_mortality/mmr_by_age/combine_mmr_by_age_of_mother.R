@@ -11,7 +11,11 @@ source("./etl//maternal_mortality/mmr_by_age/mmrate_by_age_of_mother.R")
 ## Join MMRatio and MMRate into one df
 # Maternal deaths over 50 age group is not included in mmrate df as the denominator of wyl only includes ages 15-49
 mmr_by_age_df <- mmrate_df %>%
-  right_join(mmratio_df, by = c("county", "year", "age_of_mother", "maternal_deaths"))
+  right_join(mmratio_df, by = c("county", "year", "age_of_mother", "maternal_deaths")) %>% 
+  mutate(
+    age_of_mother = as.character(age_of_mother)
+  ) %>% 
+  arrange(county, year, age_of_mother)
 
 # Calculate All Counties of NJ summaries
 overall_NJ <- mmr_by_age_df %>%

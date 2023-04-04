@@ -1,9 +1,9 @@
 rprojroot::find_root("nj_mmr_pilot.Rproj") %>%
   setwd()
-source("./etl/woman_years_lived.R")
 
-# Setting testthat to use waldo
-local_edition(3)
+# used in woman_years_lived.R
+YEARS_OF_DATA <<- c(2005:2017)
+source("./etl/woman_years_lived.R")
 
 # Suppressing summarise messages
 options(dplyr.summarise.inform = FALSE)
@@ -23,13 +23,13 @@ test_ACS_pop_data_15_53 <- calculate_woman_years_lived(test_ACS_pop_data, 15, 53
 
 test_that(
   "Verifying that woman-years lived has been calculated as expected for age groups 15 to 49",
-  expect_equal(test_ACS_pop_data_15_49, validated_data_15_49, ignore_attr = TRUE)
+  expect_equal(test_ACS_pop_data_15_49, validated_data_15_49, check.attributes = FALSE)
 )
 
 test_that(
   "Verifying that woman-years lived has been calculated as expected for age groups 15 to 49
   as 53 falls into the middle of the next age group and therefore should not be included",
-  expect_equal(test_ACS_pop_data_15_53, validated_data_15_49, ignore_attr = TRUE)
+  expect_equal(test_ACS_pop_data_15_53, validated_data_15_49, check.attributes = FALSE)
 )
 
 # Test for calculate_woman_years_lived function for 18 to 54 years
@@ -43,7 +43,7 @@ test_ACS_pop_data_16_54 <- calculate_woman_years_lived(test_ACS_pop_data, 16, 54
 test_that(
   "Verifying that woman-years lived has been calculated as expected for age groups 18 to 54
   as 16 falls within the middle of the previous age group and therefore should not be included",
-  expect_equal(test_ACS_pop_data_16_54, validated_data_18_54, ignore_attr = TRUE)
+  expect_equal(test_ACS_pop_data_16_54, validated_data_18_54, check.attributes = FALSE)
 )
 
 wyl_age_groups_col_types <- cols(
@@ -54,6 +54,7 @@ wyl_age_groups_col_types <- cols(
 )
 
 # Test for wyl_age_groups
+years <- c(2005:2017)
 test_wyl_age_group <- wyl_age_group(15, 19)
 validated_wyl_age_group <- read_csv(file.path(woman_years_lived_path_prefix, "test_wyl_age_group_validated.csv"),
   col_types = wyl_age_groups_col_types
@@ -62,5 +63,5 @@ validated_wyl_age_group <- read_csv(file.path(woman_years_lived_path_prefix, "te
 test_that(
   "Verifying that wyl_age_group() returns a tibble showing the WYL for age group 15-17
   over the years 2005-2017",
-  expect_equal(test_wyl_age_group, validated_wyl_age_group, ignore_attr = TRUE)
+  expect_equal(test_wyl_age_group, validated_wyl_age_group, check.attributes = FALSE)
 )

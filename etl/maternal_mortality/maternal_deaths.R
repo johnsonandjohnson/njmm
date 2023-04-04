@@ -14,11 +14,12 @@ find_file_names <- function(file_path_death_data, regex_pattern) {
 #' Function to extract the attribute groups from the given files
 #'
 #' @param maternal_death_files: vector of characters/strings containing the files to process
+#' @param dates: the dates in the file names to exclude 
 #'
 #' @return: a list of attribute groups
-extract_attribute_groups <- function(maternal_death_files) {
+extract_attribute_groups <- function(maternal_death_files, dates) {
   attribute_groups <- maternal_death_files %>%
-    gsub("Maternal Deaths 2005-2017 ", "", .) %>%
+    gsub(paste0("Maternal Deaths ", dates, " "), "", .) %>%
     gsub("\\.xlsx", "", .)
 
   return(attribute_groups)

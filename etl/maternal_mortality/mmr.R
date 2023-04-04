@@ -10,16 +10,20 @@ nj_ref <- read_csv("data/reference/nj_county_reference.csv", col_types = cols())
 
 ## Maternal Deaths
 # Grab maternal deaths to be used as the numerator for both MMRatio and MMRate
-maternal_deaths <- read_csv("data/raw/nj_maternal_deaths/2005-2017 Deaths by County.csv",
+maternal_deaths <- read_csv(paste0("data/raw/nj_maternal_deaths/", dates, " Deaths by County.csv"),
   skip = 10,
   col_types = cols()
 )
 
+first_column_name <- names(maternal_deaths[,1])[[1]]
+last_column_name <- names(maternal_deaths[,ncol(maternal_deaths)])[[1]]
+
 # Clean up messy SHAD data
 maternal_deaths <- maternal_deaths %>%
-  rename(County_Name = X1) %>%
-  filter(!is.na(X15) & County_Name != "Total") %>%
-  select(-X15) %>%
+  rename(County_Name = first_column_name) %>%
+  rename(last_column = last_column_name) %>%
+  filter(!is.na(last_column) & County_Name != "Total") %>%
+  select(-last_column) %>%
   left_join(nj_ref, ., by = "County_Name") %>%
   type_convert(col_types = cols()) %>%
   pivot_longer(., cols = starts_with("2"), names_to = "year", values_to = "maternal_deaths")
@@ -27,15 +31,19 @@ maternal_deaths <- maternal_deaths %>%
 
 ## Live Births
 # Grab Live Births data for denominator of MMRatio
-live_births <- read_csv("data/raw/nj_live_births/2005-2017 Live Births by County.csv",
+live_births <- read_csv(paste0("data/raw/nj_live_births/", dates, " Live Births by County.csv"),
   skip = 9, col_types = cols()
 )
 
+first_column_name <- names(live_births[,1])[[1]]
+last_column_name <- names(live_births[,ncol(live_births)])[[1]]
+
 # Clean up messy SHAD Live Births data
 live_births <- live_births %>%
-  rename(County_Name = X1) %>%
-  filter(!is.na(X15) & County_Name != "Total") %>%
-  select(-X15) %>%
+  rename(County_Name = first_column_name) %>%
+  rename(last_column = last_column_name) %>%
+  filter(!is.na(last_column) & County_Name != "Total") %>%
+  select(-last_column) %>%
   left_join(nj_ref, ., by = "County_Name") %>%
   type_convert(col_types = cols()) %>%
   pivot_longer(., cols = starts_with("2"), names_to = "year", values_to = "live_births")
@@ -43,7 +51,7 @@ live_births <- live_births %>%
 
 ## Calculate MMRatio
 mmratio_df <- maternal_deaths %>%
-  full_join(live_births, by = c("FIPS_Code", "County_Name", "year")) %>%
+  full_join(live_births, by = c("FIPS_Code", "County_Name", "year")) %>% 
   complete(FIPS_Code, year) %>%
   mutate(
     maternal_deaths = replace(maternal_deaths, is.na(maternal_deaths), 0),
@@ -54,12 +62,12 @@ mmratio_df <- maternal_deaths %>%
 
 ## Woman Years Lived
 # Grab woman years lived across all years and counties for denominator of MMRate
-years_lived <- c(2005:2017) %>%
+years_lived <- YEARS_OF_DATA %>%
   map(woman_years_lived) %>%
   reduce(full_join, by = "fips_code")
 
 # Create the column names for WYL specific to each year and replace
-colnames(years_lived) <- c("fips_code", paste(2005:2017))
+colnames(years_lived) <- c("fips_code", YEARS_OF_DATA)
 
 # Make years_lived df long instead of wide to get ready for the join to maternal_deaths df
 years_lived <- years_lived %>%
